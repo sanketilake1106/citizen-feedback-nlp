@@ -1,0 +1,16 @@
+<div class="form-container">
+  <div class="card">
+    <h2>📝 Citizen Feedback Analysis</h2>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" [(ngModel)]="feedbackText" rows="5" placeholder="Type your thoughts here..."></textarea>
+
+    <button class="analyze-btn" (click)="submitFeedback()">🔍 Analyze Feedback</button>
+
+    <div class="results-section" *ngIf="result">
+      <app-sentiment-result [sentiment]="result?.sentiment"></app-sentiment-result>
+      <app-topic-list [topics]="result?.topics"></app-topic-list>
+      <app-improvement-suggestion [improvements]="result?.improvements"></app-improvement-suggestion>
+    </div>
+  </div>
+</div>

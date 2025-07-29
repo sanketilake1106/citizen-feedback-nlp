@@ -1,0 +1,8 @@
+<div *ngIf="topics?.length" class="topic-container">
+  <h3>Extracted Topics</h3>
+  <div class="topic-tags">
+    <span class="topic-chip" *ngFor="let topic of topics">
+      {{ topic }}
+    </span>
+  </div>
+</div>

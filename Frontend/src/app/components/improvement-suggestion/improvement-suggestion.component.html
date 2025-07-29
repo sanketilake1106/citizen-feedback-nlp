@@ -1,0 +1,8 @@
+<div class="improvement-container" *ngIf="improvements?.length">
+  <h3>✨ Improvement Suggestions</h3>
+  <ul>
+    <li *ngFor="let suggestion of improvements">
+      <span class="icon">💡</span> {{ suggestion }}
+    </li>
+  </ul>
+</div>

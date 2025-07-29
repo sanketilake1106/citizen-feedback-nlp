@@ -1,0 +1,9 @@
+<div *ngIf="sentiment" class="sentiment-card" [ngClass]="sentiment.toLowerCase()">
+  <h3>Sentiment Analysis Result</h3>
+  <div class="sentiment-text">
+    <span class="emoji">
+      {{ sentiment === 'positive' ? '😊' : sentiment === 'negative' ? '😞' : '😐' }}
+    </span>
+    <span class="label">{{ sentiment | titlecase }}</span>
+  </div>
+</div>
